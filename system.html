@@ -1,0 +1,875 @@
+<style>
+    body{
+        margin: 0;
+        background-image: url('back1.png');
+        background-size: cover;
+        width: 100%;
+        height:100%;
+    }
+    div.starrtmenu{
+        background-color: rgb(220, 220, 220);
+        height: 60;
+        border-radius: 30px;
+    }
+    button.startbutton{
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(0, 0, 0);
+        width: 60;
+        height: 60;
+        border-radius: 30px;
+        margin-left: 1;
+    }
+    div.startbar{
+        background-color: rgba(244, 244, 243, 0.732);
+        width: 300;
+        height: 500;
+        margin-left: 15;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    div.setting{
+        background-color: rgb(22, 22, 22);
+        width: 1000;
+        height: 600;
+        bottom: 0;
+        margin-left: 350;
+        position: relative;
+        display: none;
+        border-radius: 10px;
+    }
+    div.color{
+        background-color: rgb(22, 22, 22);
+        width: 1000;
+        height: 600;
+        bottom: 0;
+        margin-left: 350;
+        position: relative;
+        display: none;
+        border-radius: 10px;
+    }
+    div.pass{
+      background-color: rgb(22, 22, 22);
+      color: white;
+        width: 1000;
+        height: 600;
+        bottom: 0;
+        margin-left: 350;
+        position: relative;
+        border-radius: 10px;
+    }
+    div.head{
+        width: 1000;
+        height: 35;
+        background-color: rgb(27, 27, 27);
+        color: white;
+        border-radius: 10px;
+    }
+    div.head1{
+        width: 1000;
+        height: 35;
+        background-color: rgb(27, 27, 27);
+        color: white;
+        border-radius: 10px;
+        margin-left: 350;
+    }
+    div.PASSHE{
+      background-color: rgb(27, 27, 27);
+        width: 1000;
+        height: 600;
+        bottom: 0;
+        margin-left: 350;
+        position: relative;
+        display: none;
+        border-radius: 10px;
+        color: white;
+    }
+    div.window1111{
+      background-color: rgb(22, 22, 22);
+      border-radius: 10px;
+      width: 1000;
+        height: 600;
+        bottom: 0;
+        margin-left: 350;
+        position: relative;
+        display: none
+    }
+    .loader {
+  color: #ffffff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+    /* 1214version */
+</style>
+<html>
+    <title>HARU OS</title>
+    <body>
+        <div id="shv">
+        <div class="starrtmenu">
+            <button class="startbutton" id="startbutton">
+                H
+            </button>
+        </div>
+        <div class="startbar" id="startbar">
+            <button id="settingbutton">設定</button>
+            <button id="memobutton">メモ</button>
+        </div>
+        </div>
+        <div class="setting" id="setting">
+            <div class="head" id="shead"><h2 style="margin-left: 5;">設定</h2>
+                <button style="background-color: rgb(179, 64, 64); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 965;" id="batu1">×</button>
+                <button style="background-color: rgb(64, 179, 156); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 925;" id="kaku1">◇</button>
+            </div>
+            <button id="settingcolorbutton" style="background-color: black; border-radius: 30px; width:150;height: 40; color: white;">カラー設定</button>
+            <button id="PASSbutton" style="background-color: black; border-radius: 30px; width: 150;height: 40; color: white;">パスワード設定</button>
+        </div>
+            <div class="color"id="color">
+            <div class="head"id="chead"><h2 style="margin-left: 5;">カラー設定</h2>
+                <button style="background-color: rgb(179, 64, 64); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 965;" id="batu2">×</button>
+                 <button style="background-color: rgb(64, 179, 156); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 925;" id="kaku2">◇</button>
+            </div>
+        <button id="back1" style="width: 250;height: 150;background-color: black;">
+            <img src="back1.png"style="width: 250;height: 150;"></img>
+        </button>
+        <button id="back2" style="width: 250;height: 150;background-color: black;">
+            <img src="back2.png"style="width: 250;height: 150;"></img>
+        </button>
+        </div>
+        <div class="pass" id="passPP">
+            <div class="head"><h2>PASS</h2></div>
+            <button id="pass0">0</button>
+            <button id="pass1">1</button>
+            <button id="pass2">2</button>
+            <button id="pass3">3</button>
+            <button id="pass4">4</button>
+            <button id="pass5">5</button>
+            <button id="pass6">6</button>
+            <button id="pass7">7</button>
+            <button id="pass8">8</button>
+            <button id="pass9">9</button>
+            <text id="passT"></text>
+            <button id="kesu1">リセット</button>
+            <button id="OK">決定</button>
+            <div class="loader" id="loader" style="display: none;">Loading...</div>
+        </div>
+        <div class="PASSHE"id="PASSHE">
+            <div class="head"><h2>PASS設定</h2>
+                <button style="background-color: rgb(179, 64, 64); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 965;" id="batu3">×</button>
+            </div>
+            <div id="PASSHEK">
+                現在のパスワードを入力してください
+            <button id="pass110">0</button>
+            <button id="pass111">1</button>
+            <button id="pass112">2</button>
+            <button id="pass113">3</button>
+            <button id="pass114">4</button>
+            <button id="pass115">5</button>
+            <button id="pass116">6</button>
+            <button id="pass117">7</button>
+            <button id="pass118">8</button>
+            <button id="pass119">9</button>
+            <text id="passHENK"></text>
+            <button id="OKK1">決定</button>
+            </div>
+            <div id="PASSHES">
+            <button id="pass10">0</button>
+            <button id="pass11">1</button>
+            <button id="pass12">2</button>
+            <button id="pass13">3</button>
+            <button id="pass14">4</button>
+            <button id="pass15">5</button>
+            <button id="pass16">6</button>
+            <button id="pass17">7</button>
+            <button id="pass18">8</button>
+            <button id="pass19">9</button>
+            <text id="passHEN">新しいパスワード</text>
+            <button id="OK1">決定</button>
+            </div>
+        </div>
+      <!-- HARU MEMO -->
+      <div id="window1111" style="display: none;" class="window1111">
+        <div class="head"><h2>MEMO</h2>
+          <button style="background-color: rgb(179, 64, 64); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 965;" id="batu3memo">×</button>
+      </div>
+<button id="sinnkimemo">新規メモ</button>
+<button id="1101" style="width: 40;height: 40; border-radius: 30px; display: none;">1</button>
+<button id="1102"style="width: 40;height: 40; border-radius: 30px;  display: none;">2</button>
+<button id="1103"style="width: 40;height: 40; border-radius: 30px;  display: none;">3</button>
+<button id="1104"style="width: 40;height: 40; border-radius: 30px;  display: none;">4</button>
+<button id="1105"style="width: 40;height: 40; border-radius: 30px;  display: none;">5</button>
+<button id="1106"style="width: 40;height: 40; border-radius: 30px;  display: none;">6</button>
+<button id="1107"style="width: 40;height: 40; border-radius: 30px;  display: none;">7</button>
+<button id="1108"style="width: 40;height: 40; border-radius: 30px;  display: none;">8</button>
+<button id="1109"style="width: 40;height: 40; border-radius: 30px;  display: none;">9</button>
+<button id="1110"style="width: 40;height: 40; border-radius: 30px;  display: none;">10</button>
+<button id="1111"style="width: 40;height: 40; border-radius: 30px;  display: none;">11</button>
+<button id="1112"style="width: 40;height: 40; border-radius: 30px;  display: none;">12</button>
+<button id="1113"style="width: 40;height: 40; border-radius: 30px;  display: none;">13</button>
+<button id="1114"style="width: 40;height: 40; border-radius: 30px;  display: none;">14</button>
+<button id="1115"style="width: 40;height: 40; border-radius: 30px;  display: none;">15</button>
+</div>
+<div id="window2" style="display: none;">
+  <div class="head1"><h2>メモ入力</h2>
+    <button style="background-color: rgb(179, 64, 64); color: white; width: 35;height: 35;border-radius: 10px;margin-top: -57;margin-left: 965;" id="setting1">×</button>
+</div>x
+<textarea id="textarea3" style="width: 1000;height: 500; background-color: black; color: white;margin-left: 350; resize: none;"></textarea>
+<button id="hozonnbutton" style="background-color: black;color: white; border-radius: 30px;width: 55;height: 50;">保存</button>
+<div id="window" style="display: none; margin-left: 500;">
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;" type="button" value="1" onclick="clickBtn1()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;" type="button" value="2" onclick="clickBtn2()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="3" onclick="clickBtn3()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="4" onclick="clickBtn4()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="5" onclick="clickBtn5()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="6" onclick="clickBtn6()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="7" onclick="clickBtn7()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="8" onclick="clickBtn8()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="9" onclick="clickBtn9()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="10" onclick="clickBtn10()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="11" onclick="clickBtn11()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="12" onclick="clickBtn12()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="13" onclick="clickBtn13()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="14" onclick="clickBtn14()" />
+<input style="background-color: black; border-radius: 30px; width: 40;height: 40; color: white;"type="button" value="15" onclick="clickBtn15()" />
+</div>
+</div>
+
+  <!-- 追加ソフト -->
+  
+  
+
+
+
+  <!-- /追加ソフト -->
+    </body>
+</html>
+<script>
+    var Kpass=""
+    var flg1=0;
+    var flg2=0;
+    var flg3=0;
+    var pass='';
+    var pass0=0;
+    var pass1=1;
+    var pass2=2;
+    var pass3=3;
+    var pass4=4;
+    var pass5=5;
+    var pass6=6;
+    var pass7=7;
+    var pass8=8;
+    var pass9=9;
+    var pass2222="";
+    document.getElementById('passT').innerText = 'パスワードを入力';
+    function pppp(){
+      document.getElementById('startbar').style.display="none"
+      flg1=0;
+    }
+    document.getElementById('setting').addEventListener('click',pppp)
+    function process1(){
+        if(flg1==0){flg1=1}else{flg1=0}
+        if(flg1==0){
+            document.getElementById('startbar').style.display="none"
+        }
+        if(flg1==1){
+            document.getElementById('startbar').style.display="block"
+        }
+    }
+    document.getElementById('startbutton').addEventListener('click',process1)
+     function process4(){
+         document.getElementById('setting').style.display="block"
+         document.getElementById('color').style.display="none"
+         flg1=0
+         document.getElementById('startbar').style.display="none"
+         document.getElementById('color').style.bottom="0"
+         document.getElementById('setting').style.bottom="0"
+         document.getElementById('PASSHE').style.display="none"
+         document.getElementById('passHEN').innerText = '新しいパスワード';
+         Kpass=''
+     }
+     document.getElementById('settingbutton').addEventListener('click',process4)
+    var flg = localStorage.getItem('key1')
+    function process2(){
+        localStorage.setItem('key1',1)
+        document.body.style.backgroundImage = 'url(back1.png)'
+    }
+    document.getElementById('back1').addEventListener('click',process2)
+    function process3(){
+        localStorage.setItem('key1',2)
+        document.body.style.backgroundImage = 'url(back2.png)'
+    }
+    document.getElementById('back2').addEventListener('click',process3)
+    function process5(){
+         document.getElementById('color').style.display="block"
+         document.getElementById('setting').style.display="none"
+     }
+     document.getElementById('settingcolorbutton').addEventListener('click',process5)
+     function process6(){
+         document.getElementById('setting').style.display="none"
+         document.getElementById('setting').style.width="1000"
+         document.getElementById('setting').style.height="600"
+         document.getElementById('setting').style.marginLeft="350"
+         document.getElementById('shead').style.width="1000"
+         document.getElementById('batu1').style.marginLeft="965"
+         document.getElementById('kaku1').style.marginLeft="925"
+         flg2=0
+     }
+     document.getElementById('batu1').addEventListener('click',process6)
+     function process7(){
+         document.getElementById('color').style.display="none"
+         document.getElementById('color').style.width="1000"
+         document.getElementById('color').style.height="600"
+         document.getElementById('color').style.marginLeft="350"
+         document.getElementById('chead').style.width="1000"
+         document.getElementById('batu2').style.marginLeft="965"
+         document.getElementById('kaku2').style.marginLeft="925"
+         flg2=0
+     }
+     document.getElementById('batu2').addEventListener('click',process7)
+     function process8(){
+        if(flg2==0){flg2=1}else{flg2=0}
+        if(flg2==0){
+         document.getElementById('setting').style.width="1000"
+         document.getElementById('setting').style.height="600"
+         document.getElementById('setting').style.marginLeft="350"
+         document.getElementById('shead').style.width="1000"
+         document.getElementById('batu1').style.marginLeft="965"
+         document.getElementById('kaku1').style.marginLeft="925"
+        }
+        if(flg2==1){
+         document.getElementById('setting').style.width="100%"
+         document.getElementById('setting').style.height="90%"
+         document.getElementById('setting').style.marginLeft="0"
+         document.getElementById('shead').style.width="100%"
+         document.getElementById('batu1').style.marginLeft="1645"
+         document.getElementById('kaku1').style.marginLeft="1605"
+        }   
+         
+     }
+     document.getElementById('kaku1').addEventListener('click',process8)
+     function process9(){
+        if(flg3==0){flg3=1}else{flg3=0}
+        if(flg3==0){
+         document.getElementById('color').style.width="1000"
+         document.getElementById('color').style.height="600"
+         document.getElementById('color').style.marginLeft="350"
+         document.getElementById('shead').style.width="1000"
+         document.getElementById('batu2').style.marginLeft="965"
+         document.getElementById('kaku2').style.marginLeft="925"
+        }
+        if(flg3==1){
+         document.getElementById('color').style.width="100%"
+         document.getElementById('color').style.height="90%"
+         document.getElementById('color').style.marginLeft="0"
+         document.getElementById('chead').style.width="100%"
+         document.getElementById('batu2').style.marginLeft="1645"
+         document.getElementById('kaku2').style.marginLeft="1605"
+        }   
+     }
+     document.getElementById('kaku2').addEventListener('click',process9)
+     function process11(){
+        pass=[pass,pass0]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass0').addEventListener('click',process11)
+     function process10(){
+        pass=[pass,pass1]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass1').addEventListener('click',process10)
+     function process12(){
+        pass=[pass,pass2]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass2').addEventListener('click',process12)
+     function process13(){
+        pass=[pass,pass3]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass3').addEventListener('click',process13)
+     function process14(){
+        pass=[pass,pass4]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass4').addEventListener('click',process14)
+     function process15(){
+        pass=[pass,pass5]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass5').addEventListener('click',process15)
+     function process16(){
+        pass=[pass,pass6]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass6').addEventListener('click',process16)
+     function process17(){
+        pass=[pass,pass7]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass7').addEventListener('click',process17)
+     function process18(){
+        pass=[pass,pass8]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass8').addEventListener('click',process18)
+     function process19(){
+        pass=[pass,pass9]
+        document.getElementById('passT').innerText = pass;
+     }
+     document.getElementById('pass9').addEventListener('click',process19)
+     function process20(){
+        if(pass==localStorage.getItem('key2')){
+         document.getElementById('loader').style.display="block"
+         var log = function(){
+            document.getElementById('passPP').style.display="none",document.getElementById('shv').style.display="block"
+         };
+
+setTimeout(log, 3000);
+      }else{document.getElementById('passPP').style.display="block",document.getElementById('passT').innerText = 'パスワードが違います'}
+     }
+document.getElementById('OK').addEventListener('click',process20)
+
+function setting2(){
+  document.getElementById('passT').innerText = 'パスワードを入力 ';
+  pass=""
+}
+document.getElementById('kesu1').addEventListener('click',setting2)
+
+
+     function process21(){
+        Kpass=[Kpass,0]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass10').addEventListener('click',process21)
+     function process22(){
+        Kpass=[Kpass,1]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass11').addEventListener('click',process22)
+     function process23(){
+        Kpass=[Kpass,2]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass12').addEventListener('click',process23)
+     function process24(){
+        Kpass=[Kpass,3]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass13').addEventListener('click',process24)
+     function process25(){
+        Kpass=[Kpass,4]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass14').addEventListener('click',process25)
+     function process26(){
+        Kpass=[Kpass,5]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass15').addEventListener('click',process26)
+     function process27(){
+        Kpass=[Kpass,6]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass16').addEventListener('click',process27)
+     function process28(){
+        Kpass=[Kpass,7]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass17').addEventListener('click',process28)
+     function process29(){
+        Kpass=[Kpass,8]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass18').addEventListener('click',process29)
+     function process30(){
+        Kpass=[Kpass,9]
+        document.getElementById('passHEN').innerText = Kpass;
+     }
+     document.getElementById('pass19').addEventListener('click',process30)
+     function process31(){
+        document.getElementById('PASSHE').style.display="block"
+        document.getElementById('setting').style.display="none"
+        if(localStorage.getItem('key2')==null){document.getElementById('PASSHEK').style.display="none",document.getElementById('PASSHES').style.display="block"}else if(localStorage.getItem('key2')==''){document.getElementById('PASSHEK').style.display="none",document.getElementById('PASSHES').style.display="block"}
+        else{document.getElementById('PASSHEK').style.display="block",document.getElementById('PASSHES').style.display="none"}
+     }
+     document.getElementById('PASSbutton').addEventListener('click',process31)
+     function process32(){
+        localStorage.setItem('key2',Kpass)
+        document.getElementById('passHEN').innerText = '変更しました';
+     }
+     document.getElementById('OK1').addEventListener('click',process32)
+
+
+
+
+
+
+     function process33(){
+        pass2222=[pass2222,pass0]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass110').addEventListener('click',process33)
+     function process34(){
+        pass2222=[pass2222,pass1]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass111').addEventListener('click',process34)
+     function process35(){
+        pass2222=[pass2222,pass2]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass112').addEventListener('click',process35)
+     function process36(){
+        pass2222=[pass2222,pass3]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass113').addEventListener('click',process36)
+     function process37(){
+        pass2222=[pass2222,pass4]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass114').addEventListener('click',process37)
+     function process38(){
+        pass2222=[pass2222,pass5]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass115').addEventListener('click',process38)
+     function process39(){
+        pass2222=[pass2222,pass6]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass116').addEventListener('click',process39)
+     function process40(){
+        pass2222=[pass2222,pass7]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass117').addEventListener('click',process40)
+     function process41(){
+        pass2222=[pass2222,pass8]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass118').addEventListener('click',process41)
+     function process42(){
+        pass2222=[pass2222,pass9]
+        document.getElementById('passHENK').innerText = pass2222;
+     }
+     document.getElementById('pass119').addEventListener('click',process42)
+     function process43(){
+        if(pass2222==localStorage.getItem('key2')){document.getElementById('PASSHEK').style.display="none",document.getElementById('PASSHES').style.display="block",pass2222='',document.getElementById('passHENK').innerText = '';}
+     }
+document.getElementById('OKK1').addEventListener('click',process43)
+function process44(){
+    document.getElementById('PASSHE').style.display="none"
+    pass2222=''
+    Kpass=''
+    document.getElementById('passHENK').innerText = '';
+    document.getElementById('passHEN').innerText = '';
+     }
+     document.getElementById('batu3').addEventListener('click',process44)
+     function process55(){
+    document.getElementById('window1111').style.display="none"
+     }
+     document.getElementById('batu3memo').addEventListener('click',process55)
+     function process45(){
+      document.getElementById('window1111').style.display="block"
+      document.getElementById('startbar').style.display="none"
+      document.getElementById('window2').style.display="none"
+      flg1=0;
+      if(localStorage.getItem('キー1')==''){document.getElementById('1101').style.display="none"}else if(localStorage.getItem('キー1')==null){document.getElementById('1101').style.display="none"}
+      else{document.getElementById('1101').style.display="block"}
+      if(localStorage.getItem('キー2')==''){document.getElementById('1102').style.display="none"}else if(localStorage.getItem('キー2')==null){document.getElementById('1102').style.display="none"}
+      else{document.getElementById('1102').style.display="block"}
+      if(localStorage.getItem('キー3')==''){document.getElementById('1103').style.display="none"}else if(localStorage.getItem('キー3')==null){document.getElementById('1103').style.display="none"}
+      else{document.getElementById('1103').style.display="block"}
+      if(localStorage.getItem('キー4')==''){document.getElementById('1104').style.display="none"}else if(localStorage.getItem('キー4')==null){document.getElementById('1104').style.display="none"}
+      else{document.getElementById('1104').style.display="block"}
+      if(localStorage.getItem('キー5')==''){document.getElementById('1105').style.display="none"}else if(localStorage.getItem('キー5')==null){document.getElementById('1105').style.display="none"}
+      else{document.getElementById('1105').style.display="block"}
+      if(localStorage.getItem('キー6')==''){document.getElementById('1106').style.display="none"}else if(localStorage.getItem('キー6')==null){document.getElementById('1106').style.display="none"}
+      else{document.getElementById('1106').style.display="block"}
+      if(localStorage.getItem('キー7')==''){document.getElementById('1107').style.display="none"}else if(localStorage.getItem('キー7')==null){document.getElementById('1107').style.display="none"}
+      else{document.getElementById('1107').style.display="block"}
+      if(localStorage.getItem('キー8')==''){document.getElementById('1108').style.display="none"}else if(localStorage.getItem('キー8')==null){document.getElementById('1108').style.display="none"}
+      else{document.getElementById('1108').style.display="block"}
+      if(localStorage.getItem('キー9')==''){document.getElementById('1109').style.display="none"}else if(localStorage.getItem('キー9')==null){document.getElementById('1109').style.display="none"}
+      else{document.getElementById('1109').style.display="block"}
+      if(localStorage.getItem('キー10')==''){document.getElementById('1110').style.display="none"}else if(localStorage.getItem('キー10')==null){document.getElementById('1110').style.display="none"}
+      else{document.getElementById('1110').style.display="block"}
+      if(localStorage.getItem('キー11')==''){document.getElementById('1111').style.display="none"}else if(localStorage.getItem('キー11')==null){document.getElementById('1111').style.display="none"}
+      else{document.getElementById('1111').style.display="block"}
+      if(localStorage.getItem('キー12')==''){document.getElementById('1112').style.display="none"}else if(localStorage.getItem('キー12')==null){document.getElementById('1112').style.display="none"}
+      else{document.getElementById('1112').style.display="block"}
+      if(localStorage.getItem('キー13')==''){document.getElementById('1113').style.display="none"}else if(localStorage.getItem('キー13')==null){document.getElementById('1113').style.display="none"}
+      else{document.getElementById('1113').style.display="block"}
+      if(localStorage.getItem('キー14')==''){document.getElementById('1114').style.display="none"}else if(localStorage.getItem('キー14')==null){document.getElementById('1114').style.display="none"}
+      else{document.getElementById('1114').style.display="block"}
+      if(localStorage.getItem('キー15')==''){document.getElementById('1115').style.display="none"}else if(localStorage.getItem('キー15')==null){document.getElementById('1115').style.display="none"}
+      else{document.getElementById('1115').style.display="block"}
+     }
+     document.getElementById('memobutton').addEventListener('click',process45)
+    window.onload = function(){
+      document.getElementById('shv').style.display="none"
+      if(flg==1){document.body.style.backgroundImage = 'url(back1.png)'}
+      if(flg==2){document.body.style.backgroundImage = 'url(back2.png)'}
+      if(localStorage.getItem('key2')==null){document.getElementById('passPP').style.display="none",document.getElementById('shv').style.display="block"}else if(localStorage.getItem('key2')==''){document.getElementById('passPP').style.display="none",document.getElementById('shv').style.display="block"}else{document.getElementById('passPP').style.display="block",document.getElementById('shv').style.display="none"}
+}
+
+
+   // HARUMEMO
+   const ta3 = document.getElementById("textarea3").value;
+   function p1(){
+      document.getElementById('window').style.display="block"
+      document.getElementById('window1111').style.display="none"
+   }
+  document.getElementById('hozonnbutton').addEventListener('click',p1)
+  function clickBtn1() {
+    const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー1', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn2() {
+    const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー2', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn3() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー3', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn4() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー4', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn5() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー5', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn6() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー6', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn7() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー7', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn8() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー8', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn9() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー9', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn10() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー10', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn11() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー11', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn12() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー12', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn13() {
+      const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー13', ta3)
+    document.getElementById('window').style.display="none"
+  }
+   function clickBtn14() {
+    const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー14', ta3)
+    document.getElementById('window').style.display="none"
+  }
+  function clickBtn15() {
+   const ta3 = document.getElementById("textarea3").value;
+    localStorage.setItem('キー15', ta3)
+    document.getElementById('window').style.display="none"
+  }
+function p1101() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー1');
+  }
+  document.getElementById('1101').addEventListener('click',p1101)
+  function p1102() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー2');
+  }
+  document.getElementById('1102').addEventListener('click',p1102)
+  function p1103() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー3');
+  }
+  document.getElementById('1103').addEventListener('click',p1103)
+  function p1104() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー4');
+  }
+  document.getElementById('1104').addEventListener('click',p1104)
+  function p1105() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー5');
+  }
+  document.getElementById('1105').addEventListener('click',p1105)
+  function p1106() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー6');
+  }
+  document.getElementById('1106').addEventListener('click',p1106)
+  function p1107() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー7');
+  }
+  document.getElementById('1107').addEventListener('click',p1107)
+  function p1108() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー8');
+  }
+  document.getElementById('1108').addEventListener('click',p1108)
+  function p1109() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+   document.getElementById("textarea3").value=localStorage.getItem('キー9');
+  }
+  document.getElementById('1109').addEventListener('click',p1109)
+  function p1110() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+   document.getElementById("textarea3").value=localStorage.getItem('キー10');
+  }
+  document.getElementById('1110').addEventListener('click',p1110)
+  function p1111() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー11');
+  }
+  document.getElementById('1111').addEventListener('click',p1111)
+  function p1112() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+   document.getElementById("textarea3").value=localStorage.getItem('キー12');
+  }
+  document.getElementById('1112').addEventListener('click',p1112)
+  function p1113() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー13');
+  }
+  document.getElementById('1113').addEventListener('click',p1113)
+  function p1114() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー14');
+  }
+  document.getElementById('1114').addEventListener('click',p1114)
+  function p1115() {
+    document.getElementById('window2').style.display="block"
+    document.getElementById('window1111').style.display="none"
+    document.getElementById("textarea3").value=localStorage.getItem('キー15');
+  }
+  document.getElementById('1115').addEventListener('click',p1115)
+  function setting1() {
+    document.getElementById('window2').style.display="none"
+  }
+  document.getElementById('setting1').addEventListener('click',setting1)
+  function setting4() {
+    document.getElementById('window1111').style.display="none"
+    document.getElementById('window2').style.display="block"
+  }
+  document.getElementById('sinnkimemo').addEventListener('click',setting4)
+</script>
