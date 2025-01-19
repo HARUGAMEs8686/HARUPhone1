@@ -62,7 +62,7 @@ export function Itemrun_HARUPhone1(eventData, quest, location, rotation, rotatio
                 form.button(`§l広告§r\n${performance_system2[random_performance][2]}`);
             }
             form.button(`通知 §b`);
-            form.button("§9HARU PAY");
+            form.button("§9HARU PA");
             form.button("§2HARU Account");
             form.button("Quick");
             form.button("§3メール");
